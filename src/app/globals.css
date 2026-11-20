@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-times: "Times New Roman", Times, Georgia, serif;
+  --font-sans: "Times New Roman", Times, Georgia, serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  --font-heading: 'Playfair Display', 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  --font-display: 'Playfair Display', 'Cinzel', Georgia, serif;
+  --font-bday: 'Great Vibes', 'Alex Brush', 'Pinyon Script', 'Parisienne', cursive;
+  --font-script: 'Great Vibes', 'Alex Brush', 'Pinyon Script', 'Parisienne', cursive;
+  --font-handwriting: "Times New Roman", Times, Georgia, serif;
+}
+
+/* Global Base: Times New Roman for all reading text */
+html, body {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  background: #FCFBF9;
+  color: #171717;
+}
+
+/* Times New Roman Classes for all body text */
+.font-times,
+.font-sans,
+.font-body,
+.font-handwriting {
+  font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+/* All paragraphs, stories, and reading blocks use Times New Roman */
+p, 
+p.font-serif, 
+p.font-sans, 
+p.font-handwriting,
+li {
+  font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+/* Best style for Headings: Playfair Display + Cormorant Garamond + Cinzel */
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+  font-family: 'Playfair Display', 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Attractive Display Font for Happy Birthday Ammu */
+.font-bday,
+.font-bday-hero,
+.font-script {
+  font-family: 'Great Vibes', 'Alex Brush', 'Pinyon Script', 'Parisienne', 'Dancing Script', cursive !important;
+}
+
+/* Visible elegant custom scrollbar for all reading pages */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(254, 242, 242, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%);
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e11d48 0%, #be123c 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f43f5e rgba(254, 242, 242, 0.7);
+}
+
+/* Specific elements that need scrollbars hidden */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Hide Next.js dev tools indicator & portals */
+nextjs-portal,
+[data-nextjs-dev-tools-button],
+[data-nextjs-dev-overlay-indicator],
+[data-nextjs-toast],
+#__next-build-watcher,
+div:has(> button[data-nextjs-dev-tools-button]) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
